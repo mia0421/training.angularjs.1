@@ -17,6 +17,9 @@ gulp.task('tsc', function () {
             noImplicitAny: true,
             outFile: 'output.js'
         }))
+        .on('error', (error) => {
+            console.log(error)
+        })
         .pipe(gulp.dest('built/local'));
 });
 
