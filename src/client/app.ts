@@ -1,18 +1,13 @@
-declare var angular: any;
+
 namespace myAPP {
-    import myService = myApp.myService;
-    angular.module("myApp", []);
+    angular.module("myApp",[]);
 
     export class myCtrl {
-        static $inject = ['$scope', '$q', 'myService'];
-
-
-        constructor(private $scope: any,
-                    private $q: ng.IQService,
-                    private myService: any
-        ) {
+        static $inject = ['$scope'];
+        private name:string;
+        constructor($scope) {
+            this.name = "mia";
         }
-
     }
 
     angular.module("myApp").controller("myCtrl", myCtrl);
