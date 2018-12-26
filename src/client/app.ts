@@ -1,12 +1,11 @@
-
+declare var angular: any;
 namespace myAPP {
     angular.module("myApp",[]);
 
     export class myCtrl {
         static $inject = ['$scope'];
-        private name:string;
         constructor($scope) {
-            this.name = "mia";
+
         }
     }
 
